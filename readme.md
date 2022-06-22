@@ -5,5 +5,6 @@ The assignment was to write the program in C, but I finished early and wanted to
 more of a challenge. Here's the result. This only works on x86 or x86-64 processors on Windows,
 but the processor and the Windows version are not so important (it doesn't use very many extensions)
 
-To build this, you need to first create a `build/` directory, and then run `build.bat`. You must have
-MASM (Microsoft's assembler) available in the shell's path. I would recommend just using the x86 Build Tools shell.
+To build this, run `build` in the root directory. You must have `ml` (MASM, Microsoft's assembler) and
+`link` (Microsoft's linker) available to the shell. I would recommend using the x86 Build Tools shell,
+since it comes with installations of Visual Studio and sets both programs to be in path.
