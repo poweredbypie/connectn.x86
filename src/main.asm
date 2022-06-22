@@ -6,7 +6,11 @@ extern io_init: proc
 ; cmdline.asm
 extern process_cmdline: proc
 
-include game.asm
+; game.asm
+include game.inc
+extern game_init: proc
+extern game_deinit: proc
+extern game_play: proc
 
 .code
 start proc

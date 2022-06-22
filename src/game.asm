@@ -1,3 +1,5 @@
+.model flat
+
 includelib kernel32
 extern _GetProcessHeap@0: proc
 extern _HeapAlloc@12: proc
@@ -11,15 +13,7 @@ extern out_write_newline: proc
 extern out_write_space: proc
 extern in_read_int: proc
 
-Game struct
-    rows dword ?
-    cols dword ?
-    win dword ?
-    turns_left dword ?
-    ; this is a bool but word alignment is better lol
-    player_two dword ?
-    arr dword ?
-Game ends
+include game.inc
 
 .code
 ; PARAMS:
@@ -649,3 +643,5 @@ play:
     pop esi
     ret
 game_play endp
+
+end
